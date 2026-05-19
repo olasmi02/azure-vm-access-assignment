@@ -4,7 +4,7 @@
 # =============================================================================
 
 $RG_NAME     = "rg-vm-access-weu"
-$ADMIN_IP    = "129.205.124.250"
+$ADMIN_IP    = "197.211.52.179"
 
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host "  Securing Network Security Groups (NSGs)" -ForegroundColor Cyan

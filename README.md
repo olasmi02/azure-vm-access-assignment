@@ -49,8 +49,8 @@ Initially, the Virtual Machines were provisioned with default open ports for RDP
 
 ### Security Script Execution (`secure_nsg.ps1`)
 The provided PowerShell script automates the lockdown of both NSGs:
-- Updates `default-allow-ssh` rule on `nsg-linux-weu` to only allow traffic from `129.205.124.250`.
-- Updates `default-allow-rdp` rule on `nsg-windows-weu` to only allow traffic from `129.205.124.250`.
+- Updates `default-allow-ssh` rule on `nsg-linux-weu` to only allow traffic from `197.211.52.179`.
+- Updates `default-allow-rdp` rule on `nsg-windows-weu` to only allow traffic from `197.211.52.179`.
 
 This prevents unauthorized scanning and brute-force attacks from malicious actors on the internet.
 
@@ -68,13 +68,15 @@ This prevents unauthorized scanning and brute-force attacks from malicious actor
 
 ### Linux NSG — SSH Rule Restricted to Admin IP
 ![Linux NSG SSH Rule](screenshots/nsg_linux_ssh_rule.png)
-*Port 22 restricted to 129.205.124.250 only*
+*Port 22 restricted to 197.211.52.179 only*
 
 ### Windows NSG — RDP Rule Restricted to Admin IP
 ![Windows NSG RDP Rule](screenshots/nsg_windows_rdp_rule.png)
-*Port 3389 restricted to 129.205.124.250 only*
+*Port 3389 restricted to 197.211.52.179 only*
 
-> **Note:** An RDP screenshot of the Windows VM desktop was captured manually by connecting via Remote Desktop Connection to `20.229.20.124` using credentials `azureadmin / Password123!@#`.
+### RDP Connection to Windows VM
+![RDP Connection to vm-windows-weu](screenshots/rdp_windows_connection.png)
+*Successful RDP session to `vm-windows-weu` at `20.229.20.124` using credentials `azureadmin`*
 
 ---
 
