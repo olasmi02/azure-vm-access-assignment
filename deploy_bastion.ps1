@@ -3,7 +3,7 @@
 # Assignment: Cloud VM Connectivity
 # =============================================================================
 
-$SUBSCRIPTION_ID = "9335a9cd-ae74-439b-94b3-d965ca478c53"
+$SUBSCRIPTION_ID = "<subscription-id>"
 $LOCATION        = "westeurope"
 $RG_NAME         = "rg-vm-access-weu"
 $VNET_NAME       = "vnet-vm-access-weu"
