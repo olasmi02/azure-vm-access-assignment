@@ -28,17 +28,17 @@ This project focuses on the fundamental cloud skill of securely accessing and ma
 2. Open a terminal or command prompt.
 3. Use the SSH command with the VM's public IP:
    ```bash
-   ssh azureadmin@4.180.47.161
+   ssh azureadmin@<linux-vm-public-ip>
    ```
 4. Accept the host key fingerprint if prompted, and authenticate using the generated SSH key.
 
 ### 2. Connecting to the Windows VM (RDP)
 1. Ensure your IP address is whitelisted in the NSG (`nsg-windows-weu`).
 2. Open the **Remote Desktop Connection** client on your local machine.
-3. Enter the Windows VM's Public IP: `20.229.20.124`.
+3. Enter the Windows VM's Public IP: `<windows-vm-public-ip>`.
 4. Click **Connect** and enter the credentials:
    - **Username:** `azureadmin`
-   - **Password:** `Password123!@#`
+   - **Password:** `<your-admin-password>`
 5. Accept the security certificate warning to establish the remote desktop session.
 
 ---
@@ -75,7 +75,7 @@ Azure Bastion allows secure browser-based connections directly from the Azure Po
 
 | Target VM | Protocol | Port | Authentication | Connection Experience |
 |-----------|----------|------|----------------|-----------------------|
-| `vm-windows-weu` | RDP | 3389 | Password (`azureadmin` / `Password123!@#`) | Full graphical Windows Server desktop inside the browser tab |
+| `vm-windows-weu` | RDP | 3389 | Password (`azureadmin` / `<your-admin-password>`) | Full graphical Windows Server desktop inside the browser tab |
 | `vm-linux-weu` | SSH | 22 | SSH Private Key or Password | Interactive Bash shell terminal inside the browser tab |
 
 ### Step-by-Step Connection Guide
